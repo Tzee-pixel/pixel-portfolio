@@ -35,8 +35,8 @@ export class UIManager {
       downloadBtn.addEventListener('click', () => {
         // Download the appropriate portfolio based on language
         const portfolioUrl = this.currentLanguage === 'jp'
-          ? '/tejashree-portfolio-jp.pdf'
-          : '/tejashree-portfolio-eng.pdf';
+          ? `${import.meta.env.BASE_URL}tejashree-portfolio-jp.pdf`
+          : `${import.meta.env.BASE_URL}tejashree-portfolio-eng.pdf`;
 
         // Create a temporary link and trigger download
         const link = document.createElement('a');
